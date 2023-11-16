@@ -1,30 +1,51 @@
+/* GLOBAL STYLES */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f2f2f2;
+    
 }
 
+button {
+    font-size:46px;
+    background-color: #6E7271;
+    border-radius: 10%;
+    font-family:'Orbitron', serif;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Add this line */
+}
+
+button:active {
+    background-color: #5a5a5a; /* Darker shade when button is pressed */
+    box-shadow: inset 0px 0px 5px #000; /* Inner shadow to create depth */
+}
+
+/* MAIN FRAME */
 .frame {
     width: 600px;
     height: 800px;
-    border: 4px solid black;
+    border: 4px solid #353535;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #353535;
+    border-radius: 2%;
 }
 
+/* DISPLAY */
 .display-screen {
     width: 564px;
     height:200px;
-    border:4px solid black;
-    background-color: grey;
+    border:4px solid #BBC5AC;
+    border-radius:5%;
+    background-color: #BBC5AC;
 }
 
 /* KEYPAD ELEMENTS */
 .keypad {
+    padding-top:11px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -37,6 +58,29 @@ body {
     height:80px;
 }
 
+.operator {
+    background-color: #CE382A;
+}
+
+.operator:active {
+    background-color: rgb(150, 40, 30); /* Darker shade when button is pressed */
+    box-shadow: inset 0px 0px 5px #000; /* Inner shadow to create depth */
+}
+
 #zero {
     width:277px;
+}
+
+/* CREDITS */
+.credits {
+    color: #BBC5AC;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-content: start;
+    text-decoration: none;
+    font-family:'VT323', serif
 }
