@@ -18,7 +18,9 @@ button {
     background-color: #6E7271;
     border-radius: 10%;
     font-family:'Orbitron', serif;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Add this line */
+    transition: background-color 0.2s ease,        
+    box-shadow 0.2s ease;
+    color:white;
 }
 
 button:active {
