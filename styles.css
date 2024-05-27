@@ -3,35 +3,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f2f2f2;
-    
+
 }
 
 @font-face {
-    font-family:'digital-clock-font';
+    font-family: 'digital-clock-font';
     src: url('Assets/digital-7.ttf');
 }
 
 button {
-    font-size:46px;
+    font-size: 46px;
     background-color: #6E7271;
     border-radius: 10%;
-    font-family:'Orbitron', serif;
-    transition: background-color 0.2s ease,        
-    box-shadow 0.2s ease;
-    color:white;
+    font-family: 'Orbitron', serif;
+    transition: background-color 0.2s ease,
+        box-shadow 0.2s ease;
+    color: white;
 }
 
 button:active {
-    background-color: #5a5a5a; /* Darker shade when button is pressed */
-    box-shadow: inset 0px 0px 5px #000; /* Inner shadow to create depth */
+    background-color: #5a5a5a;
+    box-shadow: inset 0px 0px 5px #000;
 }
 
 /* MAIN FRAME */
 .frame {
-    width: 600px;
-    height: 800px;
+    width: 80%;
+    height: 110vh;
+    max-width: 600px;
+    max-height: 800px;
+    transform: scale(0.8);
+    margin-top: -2rem;
     border: 4px solid #353535;
     display: flex;
     justify-content: center;
@@ -41,62 +44,83 @@ button:active {
     border-radius: 2%;
 }
 
+@media only screen and (max-width: 600px) {
+
+    /* MAIN FRAME */
+    .frame {
+        width: 700px;
+        height: 800px;
+        margin-top: -5rem;
+        transform: scale(0.5);
+    }
+
+    /* DISPLAY */
+    .display-screen {
+        width: 90%;
+        height: 150px;
+    }
+}
+
 /* DISPLAY */
 .display-screen {
     width: 564px;
-    height:200px;
-    border:4px solid #BBC5AC;
-    border-radius:5%;
+    height: 200px;
+    border: 4px solid #BBC5AC;
+    border-radius: 5%;
     background-color: #BBC5AC;
-    display:flex;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
 }
 
 .digits {
-    font-family:'digital-clock-font', serif;
-    font-size:160px;
+    font-family: 'digital-clock-font', serif;
+    font-size: 160px;
     color: #353535;
 }
 
 /* KEYPAD ELEMENTS */
 .keypad {
-    padding-top:11px;
+    padding-top: 0.6875em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap:17px;
+    gap: 17px;
 }
 
-.number, .operator {
-    width:130px;
-    height:80px;
+.number,
+.operator {
+    width: 130px;
+    height: 80px;
 }
 
 #zero {
-    width:277px;
+    width: 277px;
 }
 
 /* COLORING KEYPADS */
 .operator {
     background-color: #4a4c4c;
 }
+
 .operator:active {
-    background-color: #373737; /* Darker shade when button is pressed */
-    box-shadow: inset 0px 0px 5px #000; /* Inner shadow to create depth */
+    background-color: #373737;
+    box-shadow: inset 0px 0px 5px #000;
 }
 
 #clear {
     background-color: #d7201d;
 }
+
 #clear:active {
-    background-color: #a31614; /* Darker shade when button is pressed */
-    box-shadow: inset 0px 0px 5px #000; /* Inner shadow to create depth */
+    background-color: #a31614;
+    box-shadow: inset 0px 0px 5px #000;
 }
 
-/* CREDITS */
-.credits {
+/* FOOTER */
+.footer {
     color: #BBC5AC;
     font-size: 35px;
     margin-top: 20px;
@@ -106,5 +130,5 @@ button:active {
     justify-content: flex-end;
     align-content: start;
     text-decoration: none;
-    font-family:'VT323', serif
+    font-family: 'VT323', serif
 }
